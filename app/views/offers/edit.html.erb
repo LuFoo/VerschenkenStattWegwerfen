@@ -1,4 +1,5 @@
 <h1>Edit Offer</h1>
+<h1>Edit Offer</h1>
  
 <%= form_with(model: @offer) do |form| %>
  
@@ -21,10 +22,7 @@
     <%= form.text_field :title %>
   </p>
  
-  <p>
-    <%= form.label :category %><br>
-    <%= form.select :category, ['Books', 'Clothes', 'Furniture', 'Other']%>
-  </p>
+
 
   <p>
     <%= form.label :description %><br>

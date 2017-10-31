@@ -4,7 +4,6 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Category</th>
     <th>Zipcode</th>
     <th>Description</th>
     <th colspan="4"></th>
@@ -13,7 +12,6 @@
   <% @offers.each do |offer| %>
     <tr>
       <td><%= offer.title %></td>
-      <td><%= offer.category %></td>
       <td><%= offer.zipcode %></td>
       <td><%= offer.description %></td>
       <td><%= link_to 'Show', offer_path(offer) %></td>
