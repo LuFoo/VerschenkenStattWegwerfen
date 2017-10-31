@@ -6,8 +6,9 @@
     <th>Title</th>
     <th>Category</th>
     <th>Zipcode</th>
+    <th>District</th>
     <th>Description</th>
-    <th colspan="4"></th>
+    <th colspan="5"></th>
   </tr>
  
   <% @offers.each do |offer| %>
@@ -15,6 +16,7 @@
       <td><%= offer.title %></td>
       <td><%= offer.category %></td>
       <td><%= offer.zipcode %></td>
+      <td><%= offer.district %></td>
       <td><%= offer.description %></td>
       <td><%= link_to 'Show', offer_path(offer) %></td>
       <td><%= link_to 'Edit', edit_offer_path(offer) %></td>

@@ -23,16 +23,18 @@
     <%= form.label :category %><br>
     <%= form.select :category, ['Books', 'Clothes', 'Furniture', 'Other']%>
   </p>
-
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
-
   <p>
     <%= form.label :zipcode %><br>
     <%= form.text_area :zipcode %>
   </p>
+  <p>
+    <%= form.label :district %><br>
+    <%= form.text_area :district %>
+  </p>
+    <p>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+    </p>
 
   <p>
     <%= form.submit %>
