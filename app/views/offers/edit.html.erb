@@ -1,0 +1,45 @@
+<h1>Edit Offer</h1>
+ 
+<%= form_with(model: @offer) do |form| %>
+ 
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@offer.errors.count, "error") %> prohibited
+        this offer from being saved:
+      </h2>
+      <ul>
+        <% @offer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :category %><br>
+    <%= form.select :category, ['Books', 'Clothes', 'Furniture', 'Other']%>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= form.label :zipcode %><br>
+    <%= form.text_area :zipcode %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', offers_path %>

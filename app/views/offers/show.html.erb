@@ -1,0 +1,19 @@
+<p>
+  <strong>Title:</strong>
+  <%= @offer.title %>
+</p>
+ <p>
+  <strong>Category:</strong>
+  <%= @offer.category %>
+</p>
+<p>
+  <strong>Zip Code:</strong>
+  <%= @offer.zipcode %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @offer.description %>
+</p>
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>
