@@ -3,5 +3,9 @@
 #
 # Examples:
 #
-  offers = Offer.create([{ title: 'Movies' }, { category: 'L' }, { zipcode: '12543' }, { district: 'Steglitz' }, { description: '10 movies' }])
-# Character.create(name: 'Luke', movie: movies.first)
+Offer.create(title: 'Disney Movies',category: 'Other',zipcode: '12543',district: 'Steglitz',description: '10 disney movies' )
+Offer.create(title: 'Children Books',category: 'Books',zipcode: '13088',district: 'Pankow',description: '10 books for children from age 6')
+
+Vendor.create( name: 'Trias' , description: 'CDs, DVDs', district: 'Steglitz')
+Vendor.create( name: 'Ula' , description: 'Books', district: 'Mitte')
+
