@@ -1,21 +1,26 @@
-<h2>Listing offers</h2>
+<h2>Listing Offers</h2>
  
 <%= link_to 'New offer', new_offer_path %>
 <table>
   <tr>
     <th>Title</th>
     <th>Zipcode</th>
+    <th>District</th>
     <th>Description</th>
-    <th colspan="4"></th>
+    <th colspan="5"></th>
   </tr>
  
   <% @offers.each do |offer| %>
     <tr>
       <td><%= offer.title %></td>
       <td><%= offer.zipcode %></td>
+      <td><%= offer.district %></td>
       <td><%= offer.description %></td>
       <td><%= link_to 'Show', offer_path(offer) %></td>
       <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+            <td><%= link_to 'Delete', offer_path(offer),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
