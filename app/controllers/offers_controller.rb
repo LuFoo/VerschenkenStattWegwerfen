@@ -19,6 +19,7 @@ class OffersController < ApplicationController
 	def create
 		@offer = Offer.new(offer_params)
 
+
 		if @offer.save
 			redirect_to @offer
 		else
@@ -39,6 +40,6 @@ class OffersController < ApplicationController
 	
 	private
 		def offer_params
-			params.require(:offer).permit(:title, :description, :zipcode)
+			params.require(:offer).permit(:title, :description, :zipcode, :category)
 	end
 end
