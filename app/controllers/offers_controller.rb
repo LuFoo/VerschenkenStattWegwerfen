@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
 
 	def index
-		@offers = Offer.all
+	    @offers = Offer.search(params[:term])
 	end
 
  	def show
@@ -42,9 +42,8 @@ class OffersController < ApplicationController
 
       redirect_to offers_path
     end
-	
-	private
-		def offer_params
-			params.require(:offer).permit(:title, :category, :zipcode, :district, :description)
+
+	def offer_params
+			params.require(:offer).permit(:title, :category, :zipcode, :district, :description, :term)
 	end
 end

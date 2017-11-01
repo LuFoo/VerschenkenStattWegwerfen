@@ -1,6 +1,7 @@
-<h2>Listing Offers</h2>
+<h2>Offers</h2>
  
 <%= link_to 'New offer', new_offer_path %>
+
 <table>
   <tr>
     <th>Title</th>
@@ -11,7 +12,7 @@
     <th colspan="5"></th>
   </tr>
  
-  <% @offers.each do |offer| %>
+      <% for offer in @offers %>
     <tr>
       <td><%= offer.title %></td>
       <td><%= offer.category %></td>
@@ -24,6 +25,21 @@
                     method: :delete,
                     data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  <% end %>
+        <% end %>
+
 </table>
+
+<form action="/offers" accept-charset="UTF-8" method="get">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="text" name="term" id="term" />
+  <input type="submit" name="commit" value="Search" data-disable-with="Search" />
+</form>
+
+
+
+
+
+
+
+
 
