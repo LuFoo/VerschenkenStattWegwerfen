@@ -21,7 +21,8 @@
 
   <p>
     <%= form.label :category %><br>
-    <%= form.select :category, ['Books', 'Clothes', 'Furniture', 'Other']%>
+    <% categories_array = Category.all.map { |category| [category.name, category.id] } %>
+    <%= form.select(:category, options_for_select(categories_array)) %>
   </p>
   <p>
     <%= form.label :zipcode %><br>

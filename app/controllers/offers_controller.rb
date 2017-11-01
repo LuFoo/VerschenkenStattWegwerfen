@@ -17,8 +17,8 @@ class OffersController < ApplicationController
 	end
 
 	def create
-		@offer = Offer.new(offer_params)
-
+		@category = Category.find(params[:category_id])
+		@offer = @category.offers.create(offer_params)
 
 		if @offer.save
 			redirect_to @offer
