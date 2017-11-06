@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
+  resources :categories, :offers
   resources :vendors
   get 'welcome/index'
 
-  	resources :categories, :offers
-
-  root 'welcome#index'
+    root 'welcome#index'
+    get 'offer/index'
+    get 'offer/new'
+    post 'offer/create'
+    patch 'offer/update'
+    get 'offer/index'
+    get 'offer/show'
+    get 'offer/edit'
+    get 'offer/destroy'
+    get 'offer/update'
 
 end

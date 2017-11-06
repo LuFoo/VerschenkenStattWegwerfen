@@ -1,27 +1,21 @@
-<h2>Listing Offers</h2>
- 
-<%= link_to 'New offer', new_offer_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Zipcode</th>
-    <th>District</th>
-    <th>Description</th>
-    <th colspan="5"></th>
-  </tr>
- 
-  <% @offers.each do |offer| %>
-    <tr>
-      <td><%= offer.title %></td>
-      <td><%= offer.zipcode %></td>
-      <td><%= offer.district %></td>
-      <td><%= offer.description %></td>
-      <td><%= link_to 'Show', offer_path(offer) %></td>
-      <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
-            <td><%= link_to 'Delete', offer_path(offer),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<% if @offers.blank? %>
+<p>There are not any offers currently in the system.</p>
+<% else %>
+<p>These are the current offers in our system</p>
 
+
+
+<ul id = "offers">
+   <% @offers.each do |offer| %>
+
+<li>
+   <%= link_to offer.title, {:action => 'show', :id => offer.id} -%>
+   <b> <%= link_to 'Edit', {:action => 'edit', :id => offer.id} %></b>
+   <%= link_to 'Delete', offer_path(offer), :confirm => "Are you sure you want to delete this item?", :method => :delete %>
+</li>
+
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new Offer", {:action => 'new' }%></p>
