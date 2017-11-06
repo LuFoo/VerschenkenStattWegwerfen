@@ -2,15 +2,14 @@
   <strong>Title:</strong>
   <%= @offer.title %>
 </p>
- <p>
-  <strong>Category:</strong>
-  <%= @offer.category %>
+<p>
+<strong>Category: </strong>
+<%= link_to @offer.category.name %><br />
 </p>
 <p>
   <strong>Zip Code:</strong>
   <%= @offer.zipcode %>
 </p>
-<p>
   <strong>District:</strong>
   <%= @offer.district %>
 </p>
@@ -18,6 +17,4 @@
   <strong>Description:</strong>
   <%= @offer.description %>
 </p>
-
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+<%= link_to 'Back', {:action => 'index'} %>

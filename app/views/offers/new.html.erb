@@ -1,5 +1,23 @@
 <h1>New Offer</h1>
 
-<%= render 'form' %>
+<%= form_tag :action => 'create' do %>
 
-<%= link_to 'Back', offers_path %>
+<p><label for = "offer_title">Title</label>:
+<%= text_field 'offers', 'title' %></p>
+
+<p><label for = "offer_category_id">Category</label>:
+<%= collection_select(:offers, :category_id, @categories, :id, :name, prompt: true) %></p>
+
+<p><label for = "offer_zipcode">Zipcode</label>:
+<%= text_field 'offers', 'zipcode' %></p>
+
+<p><label for = "offer_district">District</label>:
+<%= text_field 'offers', 'district' %></p>
+
+<p><label for = "offer_description">Description</label><br/>
+<%= text_area 'offers', 'description' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>
