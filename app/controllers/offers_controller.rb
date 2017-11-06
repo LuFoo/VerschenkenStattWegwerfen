@@ -13,7 +13,7 @@ class OffersController < ApplicationController
    end
 
    def offer_params
-      params.require(:offers).permit(:title, :category_id, :zipcode, :district, :description)
+      params.require(:offers).permit(:title, :category_id, :zipcode, :district, :description, :term)
    end
 
    def create
