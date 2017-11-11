@@ -1,11 +1,18 @@
 <h1>VERSCHENKEN STATT WEGWERFEN</h1>
 
-<%= link_to 'All Offers', controller: 'offers' %>
-<%= link_to 'All Vendors', controller: 'vendors' %>
-
-
+<div class="container">
 <form action="/offers" accept-charset="UTF-8" method="get">
   <input name="utf8" type="hidden" value="&#x2713;" />
   <input type="text" name="term" id="term" />
   <input type="submit" name="commit" value="Search" data-disable-with="Search" />
 </form>
+
+<div class="btn-group">
+<%= link_to 'All Offers',  {:controller =>'offers'}, :class => 'btn btn-lg btn-success' %>
+<%= link_to 'All Vendors', {:controller =>'vendors'}, :class => 'btn btn-lg btn-success' %>
+</div>
+
+</div>
+</div>
+
+

@@ -15,4 +15,13 @@ Rails.application.routes.draw do
     get 'offer/destroy'
     get 'offer/update'
 
+    resources :offers do
+
+          collection do
+            get 'search'
+          end
+        end
+
+
+
 end
