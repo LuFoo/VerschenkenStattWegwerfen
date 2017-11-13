@@ -8,6 +8,7 @@ end
 
 gem 'bootstrap', '~> 4.0.0.beta2'
 gem 'jquery-rails'
+gem 'rspec-rails', '~> 3.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
