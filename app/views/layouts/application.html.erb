@@ -8,7 +8,28 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+ <body class = "container">
+    <% if notice.present? %>
+      <aside class = "alert alert-info">
+        <%= notice %>
+      </aside>
+    <% end %>
+    <% if alert.present? %>
+      <aside class = "alert alert-danger">
+        <%= alert %>
+      </aside>
+    <% end %>
+
+
+  <div class="container">
+           <header class="header clearfix">
+                 <a class="nav-link" href="#">About</a>
+                 </li>
+                 <li class="nav-item">
+                 <% if current_user %>
+                     <%= link_to "Log Out", destroy_user_session_path, class: 'nav-link', method: :delete %>
+                  <% else %>
+                     <a class="nav-link" href="#">Contact</a>
+                  <% end %>
   </body>
 </html>
