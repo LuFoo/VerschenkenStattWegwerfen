@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :users
   resources :categories, :offers
   resources :vendors
   get 'welcome/index'
