@@ -26,7 +26,6 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
-    expectations.syntax = [:expect]
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
@@ -36,7 +35,6 @@ RSpec.configure do |config|
     # a real object. This is generally recommended, and will default to
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
-    mocks.verify_doubled_constant_names = true
   end
 
   # This option will default to `:apply_to_host_groups` in RSpec 4 (and will
@@ -45,7 +43,6 @@ RSpec.configure do |config|
   # inherited by the metadata hash of host groups and examples, rather than
   # triggering implicit auto-inclusion in groups with matching metadata.
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.expose_dsl_globally = true
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
