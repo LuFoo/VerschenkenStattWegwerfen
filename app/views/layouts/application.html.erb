@@ -23,13 +23,33 @@
 
   <div class="container">
            <header class="header clearfix">
-                 <a class="nav-link" href="#">About</a>
-                 </li>
-                 <li class="nav-item">
-                 <% if current_user %>
-                     <%= link_to "Log Out", destroy_user_session_path, class: 'nav-link', method: :delete %>
-                  <% else %>
-                     <a class="nav-link" href="#">Contact</a>
-                  <% end %>
+              <nav>
+                     <!-- active
+                     <span class="sr-only">(current)</span>
+                     -->
+                     <ul class="nav nav-pills float-right">
+                       <li class="nav-item">
+                         <%= link_to 'Offers', offers_path, class: 'nav-link' %>
+                       </li>
+                       <% if current_user %>
+                       <li class="nav-item">
+                         <%= link_to 'Offers', offer_path, class: 'nav-link' %>
+                       </li>
+                       <li class="nav-item">
+                         <%= link_to 'Vendors', vendors_path, class: 'nav-link' %>
+                       </li>
+                       <% end %>
+                       <li class="nav-item">
+                         <a class="nav-link" href="#">About</a>
+                       </li>
+                       <li class="nav-item">
+                         <% if current_user %>
+                            <%= link_to "Log Out", destroy_user_session_path, class: 'nav-link', method: :delete %>
+                         <% else %>
+                            <%= link_to 'Log in', new_user_session_path, class: 'nav-link' %>
+                         <% end %>
+                       </li>
+                     </ul>
+                   </nav>
   </body>
 </html>
