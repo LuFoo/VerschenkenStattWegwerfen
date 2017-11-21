@@ -1,12 +1,12 @@
 require 'rails_helper'
-
-RSpec.feature "Offer management", :type => :feature do
-scenario 's003: user can create offer' do
-
-click_button "All Offers"
-
-
-    expect(page).to have_text("Children")
-
+describe 'S003 See all offers' do
+  context '(when logged in)' do
+    before :each do
+      user = User.create(email: 'test@example.de', password: 'psw', password_confirmation: 'psw')
+      login_as(user, :scope => :user)
+    end
+    it 'can see all offers' do
+        visit offers_path
+        end
     end
 end
