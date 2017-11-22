@@ -8,8 +8,8 @@
 
 
 User.destroy_all
-User.create(email: 'test@example.de', name: 'Tester', password: 'psw',
-password_confirmation: 'psw')
+User.create(email: 'test@example.de', name: 'Tester', password: 'psw123*',
+password_confirmation: 'psw123*')
 
 Offer.destroy_all
 Offer.create(title: 'Children Books', category_id: 1, zipcode: '13643', district: 'Mitte', description: '15 books for children from age 6')
