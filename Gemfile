@@ -13,6 +13,8 @@ gem 'selenium-webdriver'
 gem 'rspec-rails', '~> 3.6'
 gem 'launchy'
 gem 'devise'
+gem 'poltergeist'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
