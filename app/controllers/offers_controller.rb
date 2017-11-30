@@ -20,7 +20,7 @@ class OffersController < ApplicationController
       @offer = Offer.new(offer_params)
 
       if @offer.save
-         redirect_to :action => 'index'
+         redirect_to :action => 'index', notice: 'Offer was successfully created.'
       else
          @categories = Category.all
          render :action => 'new'
