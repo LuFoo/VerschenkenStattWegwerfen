@@ -20,6 +20,8 @@ describe 'S005 users can search for a keyword in the search bar' do
 
     it 'can view the offers details' do
 
+         visit root_path
+
          click_on offers_id(@offer1)
 
          expect(page).to have_content('15 books for children from age 6')
@@ -27,6 +29,8 @@ describe 'S005 users can search for a keyword in the search bar' do
         end
 
     it 'can go back from the details view to the offers overview' do
+
+         visit root_path
 
          fill_in :term, with: "Books"
          click_on 'Back'
