@@ -15,6 +15,8 @@ gem 'devise'
 gem 'poltergeist'
 # use postgres as db adapter
 gem 'pg'
+gem 'devise'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
