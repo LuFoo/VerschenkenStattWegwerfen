@@ -11,8 +11,11 @@ User.destroy_all
 User.create(email: 'test@example.de', name: 'Tester', password: 'psw123*',
 password_confirmation: 'psw123*')
 
+Category.create(name: 'A');
 Offer.destroy_all
 Offer.create(title: 'Children Books', category_id: 1, zipcode: '13643', district: 'Mitte', description: '15 books for children from age 6')
+Offer.create(title: 'Children Books2', category_id: 1, zipcode: '13643', district: 'Mitte', description: '15 books for children from age 6')
+Offer.create(title: 'Children Books3', category_id: 1, zipcode: '13643', district: 'Mitte', description: '15 books for children from age 6')
 
 Vendor.destroy_all
 Vendor.create(name: 'Tom&Jerry', description: 'movies', district: 'Mitte')
