@@ -8,7 +8,7 @@
         <div class="input-group input-group-lg">
             <%= label_tag :keywords, nil, class: "sr-only" %>
             <%= text_field_tag :keywords, nil,
-                placeholder: "Title or Zipcode",
+                placeholder: "Title, Category or Zipcode",
                     class: "form-control input-lg"%>
             <span class= "input-group-btn">
                 <%= submit_tag "Find Offers", class: "btn btn-primary btn-lg" %>
@@ -22,26 +22,16 @@
         </br></br>
         <h2 class="h3">Search Results</h2>
     </header>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Zipcode</th>
-                <th>District</th>
-            </tr>
-        </thead>
-        <tbody>
+    <ol class="list-group">
         <% @offers.each do |offer| %>
-            <tr>
-                <td><%= offer.title %></td>
-                <td><%= offer.category_id %></td>
-                <td><%= offer.zipcode %></td>
-                <td><%= offer.district %></td>
-            </tr>
-        <%end%>
-        </tbody>
-    </table></br></br>
+            <li class="list-group-item clearfix">
+                <h2><%= offer.title %></h2>
+                <h3><%= offer.zipcode %> <%= offer.district %></h3>
+                <h4>offered <%= offer.created_at.to_date %></h4>
+                <h5><%= offer.category_id %></h5>
+            </li>
+        <% end %>
+        </ol>
 </section>
 
 <ul id = "offers">
