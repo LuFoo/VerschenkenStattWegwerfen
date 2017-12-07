@@ -19,8 +19,11 @@
 <section class= "search-results">
     <header>
         </br></br>
-        <h2 class="h3">Search Results</h2>
+        <h2 class="h3">Results</h2>
     </header>
+        <% if @vendors.present? %>
+            <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
+        <% end %>
         <ol class="list-group">
             <% @vendors.each do |vendor| %>
                 <li class="list-group-item clearfix">
@@ -33,6 +36,9 @@
                 </li>
             <% end %>
             </ol>
+            <% if @vendors.present? %>
+              <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
+            <% end %>
 </section>
 
 <table>

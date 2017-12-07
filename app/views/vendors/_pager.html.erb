@@ -1,0 +1,17 @@
+<nav>
+    <ul class="pager pagination justify-content-center">
+        <% if page > 0 %>
+            <li class="previous page-item disabled">
+                <%= link_to "&larr; Previous".html_safe,
+                    vendors_path(keywords: keywords, page: page - 1),
+                    title: "Previous" %>
+            </li>
+        <% end %>
+            <li>&nbsp;</li>
+            <li class="next">
+                <%= link_to "Next &rarr;".html_safe,
+                    vendors_path(keywords: keywords, page: page + 1),
+                    title: "Next" %>
+            </li>
+    </ul>
+</nav>
