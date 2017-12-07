@@ -1,5 +1,44 @@
 <p id="notice"><%= notice %></p>
 
+<h1 class="h2">Vendors</h1></br>
+
+<section class="search-form">
+    <%= form_for :vendors, method: :get do |f| %>
+        <div class="input-group input-group-lg">
+            <%= label_tag :keywords, nil, class: "sr-only" %>
+            <%= text_field_tag :keywords, nil,
+                placeholder: "Title or Zipcode",
+                    class: "form-control input-lg"%>
+            <span class= "input-group-btn">
+                <%= submit_tag "Find Vendors", class: "btn btn-primary btn-lg" %>
+            </span>
+        </div>
+    <% end %>
+</section>
+
+<section class= "search-results">
+    <header>
+        </br></br>
+        <h2 class="h3">Search Results</h2>
+    </header>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>District</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @vendors.each do |vendor| %>
+            <tr>
+                <td><%= vendor.name %></td>
+                <td><%= vendor.district %></td>
+            </tr>
+        <%end%>
+        </tbody>
+    </table></br></br>
+</section>
+
 <h1>Vendors</h1>
 
 <table>
