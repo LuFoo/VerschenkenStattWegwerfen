@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe 'S002 vendor can create offers' do
     before :each do
-      user = User.create(name: 'Tester2', email: 'test2@example.de', password: 'psw', password_confirmation: 'psw')
+      user = User.create!(name: 'Tester', email: 'test@example.de', password: 'psw123', password_confirmation: 'psw123')
       login_as(user, :scope => :user)
       category = Category.create(name: 'Books')
     end
@@ -14,6 +14,6 @@ describe 'S002 vendor can create offers' do
         fill_in 'offers_description', with: 'gebrauchtes Hochzeitskleid'
 
         click_button 'Create'
-        expect(page).to have_content('Offer was successfully created.')
-        end
+        expect(page).to have_content('Hochzeitskleid')
+    end
 end
