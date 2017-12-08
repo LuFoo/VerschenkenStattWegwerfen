@@ -1,6 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Vendors</h1>
+<h1 class="h2">Vendors</h1></br>
+
+<section class="search-form">
+    <%= form_for :vendors, method: :get do |f| %>
+        <div class="input-group input-group-lg">
+            <%= label_tag :keywords, nil, class: "sr-only" %>
+            <%= text_field_tag :keywords, nil,
+                placeholder: "Name, District or Description",
+                    class: "form-control input-lg"%>
+            <span class= "input-group-btn">
+                <%= submit_tag "Find Vendors", class: "btn btn-primary btn-lg" %>
+            </span>
+        </div>
+    <% end %>
+</section>
+
+<section class= "search-results">
+    <header>
+        </br></br>
+        <h2 class="h3">Results</h2>
+    </header>
+        <% if @vendors.present? %>
+            <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
+        <% end %>
+        <ol class="list-group">
+            <% @vendors.each do |vendor| %>
+                <li class="list-group-item clearfix">
+                    <h2><%= vendor.name %></h2>
+                    <h3><%= vendor.description %></h3>
+                    <h4><%= vendor.district %></h4>
+                    <h5 class="text-right">
+                       <small class="text-uppercase">Joined</small>
+                    <%= l vendor.created_at.to_date %></h>
+                </li>
+            <% end %>
+            </ol>
+            <% if @vendors.present? %>
+              <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
+            <% end %>
+</section>
 
 <table>
   <thead>
