@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.4.2
+script:
+- bundle exec rspec spec
+deploy:
+  provider: heroku
+  app: rocky-everglades-39144
+  run:
+- rails db:migrate
