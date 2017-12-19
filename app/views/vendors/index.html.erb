@@ -57,6 +57,9 @@
         <td><%= vendor.name %></td>
         <td><%= vendor.description %></td>
         <td><%= vendor.district %></td>
+        <td><a href= '<%= link_to 'Show', vendor%>'
+        onclick="this.style.backgroundColor='#990000'">
+        Paint it red</a></td>
         <td><%= link_to 'Show', vendor %></td>
         <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
         <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
