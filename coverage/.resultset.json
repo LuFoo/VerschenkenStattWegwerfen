@@ -516,11 +516,16 @@
         1,
         null
       ],
+      "/home/lucy/verschenkenStattWegwerfen/app/models/category.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/lucy/verschenkenStattWegwerfen/app/controllers/categories_controller.rb": [
         1,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null,
         1,
@@ -561,10 +566,10 @@
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
-        0,
+        1,
         null,
         null,
         null,
@@ -579,13 +584,8 @@
         1,
         null,
         null
-      ],
-      "/home/lucy/verschenkenStattWegwerfen/app/models/category.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1513802703
+    "timestamp": 1513802954
   }
 }
