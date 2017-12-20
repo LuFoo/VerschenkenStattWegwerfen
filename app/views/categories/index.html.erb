@@ -1,21 +1,25 @@
 <h2>Listing Categories</h2>
- 
-<%= link_to 'New Category', new_category_path %>
-<table>
+
+<br>
+<table id="categories">
   <tr>
     <th>Name</th>
     <th colspan="4"></th>
   </tr>
- 
-  <% @categories.each do |category| %>
-    <tr>
-      <td><%= category.name %></td>
-      <td><%= link_to 'Show', category_path(category) %></td>
-      <td><%= link_to 'Edit', edit_category_path(category) %></td>
-       <td><%= link_to 'Destroy', category_path(category),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
+  <%= render @categories %>
 </table>
+
+
+<br>
+<h5> Add a new Category</h3>
+<%= form_with(model: @category) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 
