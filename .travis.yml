@@ -1,10 +1,10 @@
-language: ruby
-rvm:
-- 2.4.2
-script:
-- bundle exec rspec spec
 deploy:
   provider: heroku
-  app: rocky-everglades-39144
-  run:
-- rails db:migrate
+  script:
+  - bundle exec rspec spec
+    app: rocky-everglades-39144
+    run:
+    - rake db:migrate
+  api_key:
+    secure: y/5Sxv/8TTtpEfIXST9gAKKtBOhJR7ynCsH0T/ZsoqaQ7Ke9Bi4miPWTi/g/sZik9avNrA6Cam061Fw+buiTgj3JqNw+hOjE+l5XzHXNPv5X12V4quMDr4z+MIB1fMugwdiueaFwLVkyJcdShRcGMjmNYtn4+TQmhh7iYT/vfvvCqE/qDgOuiYYfeMMS4rLfAq/J6c0SxABw1PAiEnjStnBmApD2+xTl3Z28TaQa7F3ynTC01USeZIF4K71ASqAsCXon7mhXb2cDAlZDHQqSwP9Qf9WM5NbklzHKQtdIukLe7JyQP2kl7qiY7cH2VebggA26x72VdcWof6JlS9+Pn9IdTAaPQ4bzjiumVz8YM8nBit4HaYSWpfMYPqWSYH+3fRMLUKPn4wHiy0wlkfwLvVGZExS6isIFL6TQ3E6s1pQwmGCbRThyvMh2//OYN1xkpbjSzzKYYc0DaUtWf023VBsiBqeaVODXfU9hplr3t2Ht84JJyey1TZMIn5CplmVl0sUTGPiJwIRjDSKXANb9tU0SGCNlAI1Ku29NAmPYHAcxZ880sEhJAXga3DPa0pK0x18/5r12T03K4oInuhPLGtpTKzuh8dY9ezWsSthClKCjxj5+NEGbq7S3mpmHI/lGXLHqZbqeXhAWqAiWw4mmMNUmTfeFhS3YpHdjn9qu7hE=
+
