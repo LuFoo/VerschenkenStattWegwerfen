@@ -5,7 +5,7 @@ describe 'S005 users can search for a keyword in the search bar' do
       login_as(user, :scope => :user)
       category = Category.create(name: 'Books')
       @offer1 = Offer.create(title: 'Children Books', category_id: 1, zipcode: '13643', district: 'Mitte', description: '15 books for children from age 6')
-      @offer2 = Offer.create(title: 'Winter clothes', category_id: 2, zipcode: '12043', district: 'Pankow', description: 'winter clothes for men')
+      @offer2 = Offer.create(title: 'Winter clothes', category_id: 1, zipcode: '12043', district: 'Pankow', description: 'winter clothes for men')
     end
 
     it 'can search for a keyword' do
