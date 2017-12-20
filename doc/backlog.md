@@ -11,3 +11,4 @@
 | S004 | As a user I want to contact a vendor.                                                     | A1         | Sprint_2       |          |
 | S009 | As a user I want to search for a vendor in the list of all vendors.                       | A3         | Sprint_3       | Done     |
 | S010 | As a user I want to search for a offer in the list of all offers.                         | A3         | Sprint_3       | Done     |
+| S011 | As a user I want to add a category on the category index page, because it is faster.      | A4         | Sprint_4       | Done     |
