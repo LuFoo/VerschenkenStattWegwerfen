@@ -1,6 +1,5 @@
 <h2>Listing Categories</h2>
- 
-<%= link_to 'New Category', new_category_path %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -18,4 +17,17 @@
     </tr>
   <% end %>
 </table>
+<br>
+<br>
+<h5> Add a new Category</h3>
+<%= form_with(model: @category) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 
