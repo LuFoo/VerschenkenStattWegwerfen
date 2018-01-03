@@ -22,7 +22,8 @@
         <h2 class="h3">Results</h2>
     </header>
         <% if @vendors.present? %>
-            <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
+            <%= render partial: "pager",
+                       locals: {keywords: @keywords, page: @page} %>
         <% end %>
         <ol class="list-group">
             <% @vendors.each do |vendor| %>
@@ -37,7 +38,8 @@
             <% end %>
             </ol>
             <% if @vendors.present? %>
-              <%= render partial: "pager", locals: {keywords: @keywords, page: @page} %>
+              <%= render partial: "pager",
+                         locals: {keywords: @keywords, page: @page} %>
             <% end %>
 </section>
 
