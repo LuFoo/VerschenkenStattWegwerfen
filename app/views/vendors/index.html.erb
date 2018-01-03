@@ -27,12 +27,12 @@
         <ol class="list-group">
             <% @vendors.each do |vendor| %>
                 <li class="list-group-item clearfix">
-                    <h2><%= vendor.name %></h2>
-                    <h3><%= vendor.description %></h3>
-                    <h4><%= vendor.district %></h4>
-                    <h5 class="text-right">
-                       <small class="text-uppercase">Joined</small>
-                    <%= l vendor.created_at.to_date %></h>
+                    <h3 class="pull-right">
+                        <small class="text-uppercase">Joined</small>
+                        <%= l vendor.created_at.to_date %></h3>
+                    <h2 class="h3"><%= vendor.name %></h2>
+                    <h4><%= vendor.description %></h4>
+                    <h5 class="h4"><%= vendor.district %></h5>
                 </li>
             <% end %>
             </ol>
