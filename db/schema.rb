@@ -45,11 +45,13 @@ ActiveRecord::Schema.define(version: 20171120225626) do
   end
 
   create_table "vendors", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.text "description"
-    t.string "district"
+    t.string "district", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["district"], name: "index_vendors_on_district"
+    t.index ["name"], name: "index_vendors_on_name", unique: true
   end
 
 end

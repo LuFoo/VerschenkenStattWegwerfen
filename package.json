@@ -1,5 +1,8 @@
 {
   "name": "verschenkenStattWegwerfen",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "file-loader": "^1.1.6",
+    "url-loader": "^0.6.2"
+  }
 }

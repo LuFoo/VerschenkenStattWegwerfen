@@ -23,8 +23,15 @@ Offer.create(title: 'Movies', category_id: 4, zipcode: '13643', district: 'Mitte
 Offer.create(title: 'CDs 80er', category_id: 3, zipcode: '13643', district: 'Mitte', description: '15 books for children from age 6')
 
 Vendor.destroy_all
-3.times do
-Vendor.create!(name: Faker::Name.first_name, description: 'Books', district: 'Pankow')
-Vendor.create(name: Faker::Name.last_name, description: 'Movies', district: 'Mitte')
-Vendor.create( name: Faker::Name.first_name, description: 'CDs, DVDs', district: 'Steglitz')
+50.times do |i|
+    Vendor.create!(
+        name: "#{Faker::Name.first_name}#{i}",
+        description: 'Books',
+        district: 'Pankow')
+    Vendor.create!(
+        name: "#{Faker::Name.last_name}#{i}",
+        description: 'Movies',
+        district: 'Mitte')
+        print '.' if i % 10 == 0
 end
+puts
