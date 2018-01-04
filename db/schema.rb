@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120225626) do
+ActiveRecord::Schema.define(version: 20180104151504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20171120225626) do
     t.string "district", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index "lower((name)::text) varchar_pattern_ops", name: "index_vendors_on_lower_name_varchar_pattern_ops"
     t.index ["district"], name: "index_vendors_on_district"
     t.index ["name"], name: "index_vendors_on_name", unique: true
   end
