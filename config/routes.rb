@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :charities
   devise_for :users
   resources :users
   resources :categories, :offers

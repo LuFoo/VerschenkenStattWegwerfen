@@ -13,3 +13,6 @@
 | S010 | As a user I want to search for a offer in the list of all offers.                         | A3         | Sprint_3       | Done     |
 | S011 | As a user I can add a category on the index page.                                         | A4-JS      | Sprint_4       | Done     | 
 | S012 | As a user I can delete a category.                                                        | A4-JS      | Sprint_4       | Done     |
+| S013 | As a user I want to see a list of all organisations in Berlin that provide and accept     | A5         | Sprint_5       |          |
+|      | free stuff, so that I can either get free stuff or give something for those in need.      |            |                |          |
+| S014 | As a user I want to see on which items each organisation is specialized.                  | A5         | Sprint_5       |          |       

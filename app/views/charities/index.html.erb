@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Charities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Goods</th>
+      <th>Address</th>
+      <th>Zipcode</th>
+      <th>District</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if (!@charities.nil?) %>
+        <% @charities.each do |charity| %>
+         <tr>
+            <td><%= charity=["index"][0]["name"] %></td>
+            <td><%= charity=["index"][0]["plz"] %></td>
+        </tr>
+    <% end %>
+    <% else%>
+        api error
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Charity', new_charity_path %>

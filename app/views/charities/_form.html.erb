@@ -1,0 +1,42 @@
+<%= form_with(model: charity, local: true) do |form| %>
+  <% if charity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(charity.errors.count, "error") %> prohibited this charity from being saved:</h2>
+
+      <ul>
+      <% charity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :charity_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goods %>
+    <%= form.text_field :goods, id: :charity_goods %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :charity_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode, id: :charity_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district %>
+    <%= form.text_field :district, id: :charity_district %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
