@@ -14,14 +14,14 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-01-14T23:29:25+01:00">2018-01-14T23:29:25+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-02-06T18:36:04+01:00">2018-02-06T18:36:04+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">32.41%</span></span>
+    (<span class="covered_percent"><span class="red">32.43%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -31,10 +31,10 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>31</b> files in total.
-    <b>216</b> relevant lines. 
-    <span class="green"><b>70</b> lines covered</span> and
-    <span class="red"><b>146</b> lines missed </span>
+    <b>33</b> files in total.
+    <b>222</b> relevant lines. 
+    <span class="green"><b>72</b> lines covered</span> and
+    <span class="red"><b>150</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,7 +63,7 @@
       <tr>
         <td class="strong"><a href="#92580e67972b4fbfaa899f6d7e46cf5c93fe1ac6" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="red strong">50.0 %</td>
-        <td>6</td>
+        <td>9</td>
         <td>2</td>
         <td>1</td>
         <td>1</td>
@@ -191,6 +191,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#fb153ff8c9b4922faa7af5a1b2b264f8c85ca9dd" class="src_link" title="config/initializers/setup_email.rb">config/initializers/setup_email.rb</a></td>
+        <td class="red strong">33.33 %</td>
+        <td>4</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#54857fe8e0d0e5a0fdd91f70a76c659111d5da39" class="src_link" title="config/initializers/wrap_parameters.rb">config/initializers/wrap_parameters.rb</a></td>
         <td class="red strong">50.0 %</td>
         <td>14</td>
@@ -264,6 +274,16 @@
         <td class="strong"><a href="#625988063a1a16f057d466289d51060919b040c2" class="src_link" title="spec/helpers/charities_helper_spec.rb">spec/helpers/charities_helper_spec.rb</a></td>
         <td class="red strong">33.33 %</td>
         <td>15</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+        <td>0.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#49c25d649bb45763cf5c49ad085f59d5cce51f5b" class="src_link" title="spec/mailers/user_mailer_spec.rb">spec/mailers/user_mailer_spec.rb</a></td>
+        <td class="red strong">33.33 %</td>
+        <td>5</td>
         <td>3</td>
         <td>1</td>
         <td>2</td>
@@ -436,28 +456,46 @@
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">  # Include default devise modules. Others available are:</code>
+          <code class="ruby">#include ActiveModel::Validations</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">  # :confirmable, :lockable, :timeoutable and :omniauthable</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
+          <code class="ruby"> # validates :password, password_strength: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  # Include default devise modules. Others available are:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  # :confirmable, :lockable, :timeoutable and :omniauthable</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
           <code class="ruby">  # :recoverable, :rememberable</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
           <code class="ruby">  devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -2203,7 +2241,7 @@
         <li class="covered" data-hits="1" data-linenumber="160">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.password_length = 6..128</code>
+          <code class="ruby">  config.password_length = 8..128</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="161">
@@ -3107,6 +3145,49 @@
           
           
           <code class="ruby"># Mime::Type.register &quot;text/richtext&quot;, :rtf</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fb153ff8c9b4922faa7af5a1b2b264f8c85ca9dd">
+  <div class="header">
+    <h3>config/initializers/setup_email.rb</h3>
+    <h4><span class="red">33.33 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">if Rails.env != &#39;test&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="2">
+          
+          
+          <code class="ruby">  email_settings = YAML::load(File.open(&quot;#{Rails.root.to_s}/config/email.yml&quot;))</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">  ActionMailer::Base.smtp_settings = email_settings[Rails.env] unless email_settings[Rails.env].nil?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
         </li>
       
     </ol>
@@ -4120,6 +4201,55 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="49c25d649bb45763cf5c49ad085f59d5cce51f5b">
+  <div class="header">
+    <h3>spec/mailers/user_mailer_spec.rb</h3>
+    <h4><span class="red">33.33 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;rails_helper&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
+          
+          <code class="ruby">RSpec.describe UserMailer, type: :mailer do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">  pending &quot;add some examples to (or delete) #{__FILE__}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>

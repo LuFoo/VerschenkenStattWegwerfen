@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-include ActiveModel::Validations
+#include ActiveModel::Validations
 
-  validates :password, password_strength: true
+ # validates :password, password_strength: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   # :recoverable, :rememberable

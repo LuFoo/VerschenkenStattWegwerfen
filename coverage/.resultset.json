@@ -428,6 +428,12 @@
         null,
         null
       ],
+      "/home/lucy/verschenkenStattWegwerfen/config/initializers/setup_email.rb": [
+        1,
+        0,
+        0,
+        null
+      ],
       "/home/lucy/verschenkenStattWegwerfen/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -489,6 +495,9 @@
       ],
       "/home/lucy/verschenkenStattWegwerfen/app/models/user.rb": [
         1,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -660,6 +669,13 @@
         null,
         null,
         null,
+        null,
+        0,
+        0,
+        null
+      ],
+      "/home/lucy/verschenkenStattWegwerfen/spec/mailers/user_mailer_spec.rb": [
+        1,
         null,
         0,
         0,
@@ -855,6 +871,6 @@
         null
       ]
     },
-    "timestamp": 1515968965
+    "timestamp": 1517938564
   }
 }
