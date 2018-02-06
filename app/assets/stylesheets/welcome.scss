@@ -1,3 +1,57 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#welcome-body{
+	background-image: url("berlin-wallpaper.png");
+	background-size: cover;
+}
+
+#welcome-title {
+	text-align: center;
+	padding-top: 200px;
+	margin-top: 0;
+	color: #ffffff;
+}
+
+#welcome-container {
+	margin-top:100px;
+	vertical-align: middle;
+	width: 500px;
+}
+
+#welcome-search input{
+	height: 50px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+
+#welcome-search input[type="text"]{
+	width: 360px;
+}
+#welcome-search input[type="submit"]{
+	width: 90px;
+	margin-left: 10px;
+	background-color: #555;
+	color: #fff;
+	border-width: 2px;
+	font-size: 18px;
+	border-color: #BABABA;
+
+}
+
+#welcome-buttons {
+	display: inherit;
+	margin: 40px auto;
+	width: 350px;
+	margin-bottom: 300px;
+	.btn {
+		background-color: #555;
+		border-color: #BABABA;
+		border-width: 2px;
+		width:170px;
+
+	}
+}
