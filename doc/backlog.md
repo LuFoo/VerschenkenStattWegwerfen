@@ -17,3 +17,5 @@
 |      | free stuff, so that I can either get free stuff or give something for those in need.      |            |                |          |
 | S014 | As a user I want to see on which items each organisation is specialized.                  | A5         | Sprint_5       | Started  |       
 | S015 | As a user who just signed up I will get a welcome email.                                  | A6         | Sprint_6       | Started  |
+| S016 | As a user I want to contact other users and vendors.                                      | A6         | Sprint_6       | Started  |
+| S017 | As a user I want to contact the development team.                                         | A6         | Sprint_6       | Started  |
