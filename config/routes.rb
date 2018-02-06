@@ -18,6 +18,15 @@ Rails.application.routes.draw do
     get 'offer/destroy'
     get 'offer/update'
 
+    get 'user/index'
+    get 'user/new'
+    post 'user/create'
+    patch 'user/update'
+    get 'user/show'
+    get 'user/edit'
+    get 'user/destroy'
+    get 'user/update'
+
     resources :offers do
 
           collection do

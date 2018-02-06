@@ -11,6 +11,8 @@ include Faker
 User.destroy_all
 User.create(email: 'test@example.de', name: 'Tester', password: 'psw123*',
 password_confirmation: 'psw123*')
+#User.create(email: 'apptesterlucy@gmail.com', name: 'Tester', password: 'asdfghjk',
+#password_confirmation: 'asdfghjk')
 
 Category.create(name: 'Books');
 Category.create(name: 'Clothes');
